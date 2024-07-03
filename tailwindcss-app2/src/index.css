@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#menu-toggle:checked + #menu {
+    display: block;
+  }
+  .about{
+    display: grid;
+    position: relative;
+    padding: 15px;
+    grid-template-columns: 45% 45%;
+  }
+  .contact{display: block;}
+  .skills{ font-family: "Montserrat Alternates", sans-serif; font-weight: 500; font-style: normal;} 
+  .animate-line{animation: slide 2s linear infinite;}
+    @keyframes slide{
+      50%{opacity: 1;}
+      100%{opacity: 0;}
+    }
+    .contact{display: inline;}
+    .animated-title::before{content: ''; position: absolute; top: -2px; left: -2px; width: 0; height: 0;background: transparent; border: 2px solid transparent; animation: border 2s linear infinite;}
+    @keyframes border{
+      0%{width: 0; height: 0; border-top-color: black; border-right-color: transparent; border-left-color: transparent; border-bottom-color: transparent;}
+      50%{width: 100%; height: 0;border-top-color: black; border-right-color: black; border-left-color: transparent; border-bottom-color: transparent;}
+      100%{width: 100%; height: 100%; border-top-color: black; border-right-color: black; border-left-color: transparent; border-bottom-color: transparent;}
+    }
+    .animated-title::after{content: ''; position: absolute;top: -2px; left: -2px; width: 0;height: 0; background: transparent; border: 2px solid transparent; animation: Border 2s linear infinite;}
+    @keyframes Border{
+      0%{width: 0; height: 0; border-top-color: transparent; border-right-color: transparent; border-left-color: black; border-bottom-color: transparent;}
+      50%{width: 0; height: 100%;border-top-color: transparent; border-right-color: transparent; border-left-color: black; border-bottom-color: black;}
+      100%{width: 100%; height: 100%; border-top-color: transparent; border-right-color: transparent; border-left-color: black; border-bottom-color: black;}
+    }
+    .vertical-line{border-left: 2px solid black; height: 350px; margin-left: 80px;}
+    .frm{margin-left: -50px;}
+    .zoom{position: relative; width: 100%;}
+    .image{display: block; width: 100%; height: auto;}
+    .overlay{position: absolute;background-color: rgba(0, 0, 0, 0.2);  bottom: 0; left: 0; right: 0; overflow: hidden; height: 100%; width: 100%; transform: scale(0); transition: .3s ease;}
+    .zoom:hover .overlay{transform: scale(1);}
+    .icon{color: white; font-size: 50px; position: absolute;top: 40%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+
+    .zoom1{position: relative; width: 100%;}
+    .image1{display: block; width: 100%; height: auto;}
+    .overlay1{position: absolute;background-color: rgba(0, 0, 0, 0.2);  bottom: 0; left: 0; right: 0; overflow: hidden; height: 100%; width: 100%; transform: scale(0); transition: .3s ease;}
+    .zoom1:hover .overlay1{transform: scale(1);}
+    .icon1{color: white; font-size: 50px; position: absolute;top: 40%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+
+    .zoom2{position: relative; width: 100%;}
+    .image2{display: block; width: 100%; height: auto;}
+    .overlay2{position: absolute;background-color: rgba(0, 0, 0, 0.2);  bottom: 0; left: 0; right: 0; overflow: hidden; height: 100%; width: 100%; transform: scale(0); transition: .3s ease;}
+    .zoom2:hover .overlay2{transform: scale(1);}
+    .icon2{color: white; font-size: 50px; position: absolute;top: 40%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+
+
+    .border-container{width: 100%; margin: 0 auto; padding: 20px; position: relative;}
+    .animated-border{padding: 10px; outline-width: 1px; outline-offset: 0; outline-color: rgba(0, 130, 206, 0); outline-style: solid;  animation: moveborder 2s linear infinite;}
+    @keyframes moveborder{
+      0%{outline-width: 7px; outline-offset: 0; outline-color: #fff;}
+      10%{outline-color: #fff;}
+      50%{outline-width: 1px; outline-offset: 4px; outline-color: #fff;}
+      100%{outline-width: 1px; outline-offset: 4px; outline-color: #fff;}
+    }
+
+
+    
+    @media screen and (max-width:1024px){
+      .animated-title{margin-top: 50px; margin-left: 150px;}
+      .animated-paragraph{
+        font-size: 18px;
+        margin-top: 280px;
+        margin-left: -200px;
+        overflow: hidden;
+      }
+      .list{
+        max-width: 100%;
+        overflow: hidden;
+        display: block;
+      }
+      .list2{max-width: 100%; display: block;}
+      .list3{max-width: 100%; display: block; line-height: 3.5;}
+      .contact{
+        overflow: hidden;
+        display: block;
+        max-width: 100%;
+        font-size: 10px;
+      }
+      .cards{display: block; max-width: 100%; margin-left: 60px; margin-top: 120px;}
+      .modal{width: 100%;  overflow: hidden;}
+      .frm{max-width: 400px; width: 100%; margin-left: 10px;}
+    }
